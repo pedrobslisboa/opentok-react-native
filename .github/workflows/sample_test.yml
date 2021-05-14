@@ -1,0 +1,18 @@
+name: Test Sample apps
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    
+jobs:
+  fetchSamples:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout samples
+        uses: actions/checkout@v2
+        with:
+          repository: opentok/opentok-react-native-samples
