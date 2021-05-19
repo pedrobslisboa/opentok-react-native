@@ -25,7 +25,7 @@ jobs:
         run: |
           cd samples/BasicVideoChat
           npm install
-          npm install ./new.tgz
+          npm install /opentok-react-native/opentok-react-native/new.tgz
           cat package.json
 #   iosBuild:
 #     needs: fetchSamples
