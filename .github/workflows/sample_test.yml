@@ -16,6 +16,7 @@ jobs:
         run: |
             npm pack
             find . -name "opentok-react-native-*.tgz" | while read -r file; do mv $file new.tgz; done
+            ls
       - name: Checkout samples
         uses: actions/checkout@v2
         with:
@@ -25,7 +26,7 @@ jobs:
         run: |
           cd samples/BasicVideoChat
           npm install
-          npm install /opentok-react-native/opentok-react-native/new.tgz
+          npm install ~/Users/runner/work/opentok-react-native/opentok-react-native/new.tgz
           cat package.json
 #   iosBuild:
 #     needs: fetchSamples
