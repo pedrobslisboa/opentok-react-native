@@ -16,4 +16,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: opentok/opentok-react-native-samples
-#           path: opentok-react-native-samples
+      - name: Pack Library
+        run: |
+            pwd
