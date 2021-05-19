@@ -33,17 +33,24 @@ jobs:
           npm install
           npm install ../../new.tgz
           cat package.json
-      - name: build BasicVideoChat
+#       - name: Build BasicVideoChat iOS
+#         run: |
+#           cd samples/BasicVideoChat/ios
+#           pod install
+#           cat Podfile.lock
+#           xcodebuild clean build -quiet -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+#       - name: Build Signaling iOS
+#         run: |
+#           cd samples/Signaling/ios
+#           pod install
+#           cat Podfile.lock
+#           xcodebuild clean build -quiet -workspace Signaling.xcworkspace -scheme Signaling -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Build BasicVideoChat Android
         run: |
-          cd samples/BasicVideoChat/ios
-          pod install
-          cat Podfile.lock
-          xcodebuild clean build -quiet -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
-      - name: build Signaling
-        run: |
-          cd samples/Signaling/ios
-          pod install
-          cat Podfile.lock
-          xcodebuild clean build -quiet -workspace Signaling.xcworkspace -scheme Signaling -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+          ./gradlew
           
   
