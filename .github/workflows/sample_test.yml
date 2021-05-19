@@ -27,12 +27,12 @@ jobs:
           npm install
           npm install ../../new.tgz
           cat package.json
-      - name: NPM install Signaling
-        run: |
-          cd samples/Signaling
-          npm install
-          npm install ../../new.tgz
-          cat package.json
+#       - name: NPM install Signaling
+#         run: |
+#           cd samples/Signaling
+#           npm install
+#           npm install ../../new.tgz
+#           cat package.json
 #       - name: Build BasicVideoChat iOS
 #         run: |
 #           cd samples/BasicVideoChat/ios
@@ -51,6 +51,7 @@ jobs:
           java-version: 1.8
       - name: Build BasicVideoChat Android
         run: |
+          cd samples/BasicVideoChat/android
           ./gradlew
           
   
