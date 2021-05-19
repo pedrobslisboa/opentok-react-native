@@ -23,5 +23,10 @@ jobs:
           path: samples
       - name: NPM install
         run: |
-          pwd 
-          ls
+          cd samples/BasicVideoChat
+          npm install
+          npm install ./new.tgz
+          cat package.json
+  iosBuild:
+    needs: fetchSamples
+    runs-on: macos-latest
