@@ -27,6 +27,6 @@ jobs:
           npm install
           npm install ./new.tgz
           cat package.json
-  iosBuild:
-    needs: fetchSamples
-    runs-on: macos-latest
+#   iosBuild:
+#     needs: fetchSamples
+#     runs-on: macos-latest
