@@ -16,7 +16,7 @@ jobs:
         run: |
             npm pack
             ls
-            for f in opentok-react-native-[[:digit:]].[[:digit:]].[[:digit:]].tgz; do echo mv "$f" "${f/react-native/new}"; don
+            for f in opentok-react-native-[[:digit:]].[[:digit:]].[[:digit:]].tgz; do echo mv "$f" "${f/react-native/new}"; done
       - name: Checkout samples
         uses: actions/checkout@v2
         with:
