@@ -25,15 +25,12 @@ jobs:
         run: |
           cd samples/BasicVideoChat
           npm install
-          pwd
           npm install ../../new.tgz
           cat package.json
-      - name: NPM install Signalling
+      - name: NPM install Signaling
         run: |
-          pwd
-          cd samples/Signalling
+          cd samples/Signaling
           npm install
-          pwd
           npm install ../../new.tgz
           cat package.json
 #   iosBuild:
