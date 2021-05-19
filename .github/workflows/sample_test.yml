@@ -39,7 +39,6 @@ jobs:
     steps:
       - name: build BasicVideoChat
         run: |
-          pwd
           ls
 #           cd samples/BasicVideoChat/ios
 #           pod install
