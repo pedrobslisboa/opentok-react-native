@@ -33,22 +33,17 @@ jobs:
           npm install
           npm install ../../new.tgz
           cat package.json
-  iosBuild:
-    needs: fetchSamples
-    runs-on: macos-latest
-    steps:
       - name: build BasicVideoChat
         run: |
-          ls
-#           cd samples/BasicVideoChat/ios
-#           pod install
-#           cat Podfile.lock
-#           xcodebuild clean build -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
-#       - name: build Signaling
-#         run: |
-#           cd samples/Signaling/ios
-#           pod install
-#           cat Podfile.lock
-#           xcodebuild clean build -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+          cd samples/BasicVideoChat/ios
+          pod install
+          cat Podfile.lock
+          xcodebuild clean build -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+      - name: build Signaling
+        run: |
+          cd samples/Signaling/ios
+          pod install
+          cat Podfile.lock
+          xcodebuild clean build -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
           
   
