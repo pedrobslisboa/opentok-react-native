@@ -38,12 +38,12 @@ jobs:
           cd samples/BasicVideoChat/ios
           pod install
           cat Podfile.lock
-          xcodebuild clean build -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+          xcodebuild clean build -quiet -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
       - name: build Signaling
         run: |
           cd samples/Signaling/ios
           pod install
           cat Podfile.lock
-          xcodebuild clean build -workspace BasicVideoChat.xcworkspace -scheme BasicVideoChat -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
+          xcodebuild clean build -quiet -workspace Signaling.xcworkspace -scheme Signaling -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.4'
           
   
