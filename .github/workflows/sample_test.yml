@@ -22,4 +22,6 @@ jobs:
           repository: opentok/opentok-react-native-samples
           path: samples
       - name: NPM install
-        run: pwd
+        run: |
+          pwd 
+          ls
