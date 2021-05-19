@@ -420,6 +420,7 @@ declare module "opentok-react-native" {
     videoNetworkStats?: CallbackWithParam<any, any>;
   }
 
+  
   interface OTSubscriberViewProps extends ViewProps {
     /**
      * OpenTok Subscriber streamId.
@@ -427,6 +428,9 @@ declare module "opentok-react-native" {
     streamId?: string;
   }
   
+  /**
+   * https://github.com/opentok/opentok-react-native/blob/main/docs/OTSubscriber.md#custom-rendering-of-streams
+   */
   export class OTSubscriberView extends React.Component<OTSubscriberViewProps> {}
 
   /**
