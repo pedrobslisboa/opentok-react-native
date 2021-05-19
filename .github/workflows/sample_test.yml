@@ -40,6 +40,7 @@ jobs:
       - name: build BasicVideoChat
         run: |
           pwd
+          ls
 #           cd samples/BasicVideoChat/ios
 #           pod install
 #           cat Podfile.lock
