@@ -419,7 +419,6 @@ declare module "opentok-react-native" {
      */
     videoNetworkStats?: CallbackWithParam<any, any>;
   }
-
   
   interface OTSubscriberViewProps extends ViewProps {
     /**
