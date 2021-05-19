@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Checkout samples
-        uses: actions/checkout@v2
-        with:
-          repository: opentok/opentok-react-native-samples
       - name: Pack Library
         run: |
             pwd
             ls
+      - name: Checkout samples
+        uses: actions/checkout@v2
+        with:
+          repository: opentok/opentok-react-native-samples
