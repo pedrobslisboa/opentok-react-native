@@ -21,9 +21,17 @@ jobs:
         with:
           repository: opentok/opentok-react-native-samples
           path: samples
-      - name: NPM install
+      - name: NPM install BasicVideoChat
         run: |
           cd samples/BasicVideoChat
+          npm install
+          pwd
+          npm install ../../new.tgz
+          cat package.json
+      - name: NPM install Signalling
+        run: |
+          pwd
+          cd samples/Signalling
           npm install
           pwd
           npm install ../../new.tgz
