@@ -16,9 +16,9 @@ jobs:
         run: |
             npm pack
             find . -name "opentok-react-native-*.tgz" | while read -r file; do mv $file new.tgz; done
-            pwd
       - name: Checkout samples
         uses: actions/checkout@v2
         with:
           repository: opentok/opentok-react-native-samples
-          run: pwd
+      - name: NPM install
+        run: pwd
