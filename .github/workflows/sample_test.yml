@@ -15,9 +15,8 @@ jobs:
       - name: Pack Library
         run: |
             npm pack
+            find . -name "opentok-react-native-*.tgz" | while read -r file; do mv $file new.tgz; done
             ls
-            shopt -s failglob
-            for f in opentok-react-native-[[:digit:]].[[:digit:]].[[:digit:]].tgz; do new="$(printf '%s' "$f" | sed 's/react-native/new/')"; echo mv "$f" "$new"; done
       - name: Checkout samples
         uses: actions/checkout@v2
         with:
